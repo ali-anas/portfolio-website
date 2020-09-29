@@ -1,0 +1,135 @@
+body {
+	padding: 76px 0px 0px 0px;
+	z-index: 0;
+}
+
+/*.row-header {
+	margin: 0px;
+    padding: 40px 0px;
+    background: linear-gradient(135deg,#05f,#09f);
+}*/
+
+.navbar {
+	background-color: #B1040E;
+	color: #FFFFFF;
+	padding: 20px;
+}
+
+.nameAndTitle{
+	.h2 {
+		text-transform: uppercase;
+	}
+}
+
+.container {
+	margin-right: auto;
+	margin-left: auto;
+}
+
+/*.container, .navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
+    width: 940px;
+}*/
+
+/*@media (min-width: 1200px)
+.container, .navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
+    width: 1170px;
+}*/
+
+/*@media (max-width: 979px) and (min-width: 768px)
+.container, .navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
+    width: 724px;
+}*/
+
+/*@media only screen and (max-width: 979px) and (min-width: 768px)
+.container {
+    width: auto;
+}*/
+
+/*
+@media (max-width: 767px)
+.container {
+    width: auto;
+}*/
+
+.navbar .container, .container {
+    padding: 0 1.125em;
+}
+
+.banner.profile {
+    background-image: url(../img/collonade.jpg);
+    color: white;
+    padding-bottom: 1.25em;
+    margin-bottom: 0;
+}
+
+@media only screen and (min-width: 768px)
+.banner.profile {
+    margin-bottom: 1.875em;
+}
+
+.banner {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    -webkit-box-shadow: 0 0.1875em 0.1875em rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 0.1875em 0.1875em rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.1875em 0.1875em rgba(0, 0, 0, 0.2);
+    background-image: url(../images/column-alt-intranet.jpg);
+    background-position: center;
+    margin: 0 0 1.875em 0;
+    padding: 1.25em 0 0;
+}
+
+/*@media only screen and (min-width: 768px)
+.banner {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+@media only screen and (max-width: 767px)
+.banner.profile {
+    height: auto;
+}*/
+
+div {
+	display: block;
+}
+
+section {
+    display: block;
+}
+
+/*h2 {
+	font-size: 0.75em;
+}*/
+
+h1 {
+    font-size: 2.25em;
+    line-height: 100%;
+    margin: 0 0 0.17857em 0;
+    font-weight: 600;
+    text-shadow: 0 0 0.35714em rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+@media only screen and (max-width: 768px)
+h1 {
+    font-size: 1.25em;
+    margin-top: 0.72222em;
+}
+
+h2 {
+	font-size: 0.875em;
+	font-weight: 500;
+    letter-spacing: 0.08333em;
+    line-height: 125%;
+    text-transform: uppercase;
+    text-shadow: 0 0 0.83333em rgba(0, 0, 0, 0.5);
+    margin-bottom: 0.83333em;
+    color: #fff;
+}
+
+@media only screen and (max-width: 768px)
+h2 {
+	font-size: 0.75em;
+}

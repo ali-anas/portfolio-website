@@ -9,8 +9,161 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+    <!-- Customized CSS -->
+    <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
+	<div class="wrapper">
+		<header id="header">
+			<nav class="navbar navbar-dark navbar-expand-sm fixed-top">
+				<a class="navbar-brand" href="#">Anas Ali</a>
+			</nav>
+		</header>
+		<main id="bodyContent">
+			<div>
+				<section id="masterHeadContainer" class="banner profile">
+					<div>
+						<div class="container">
+
+							<div class="row row-header">
+								<div class="image-handler">
+									<div class="image-container">
+											<img class="round mx-auto d-block" src="img/image-blur7.png" alt="Alberto.png">
+									</div>
+								</div>
+								<div class="col col-sm-8 col-md-6">
+									<div class="nameAndTitle">
+											<h1>Anas Ali</h1>
+											<h2>Final year CSE student at Bipin Tripathi Kumaon Institute of Technology, Dwarahat<br></h2>
+									</div>
+								</div>
+								<div class="col-12 col-sm-12 col-md">
+									<div class="icons-list">
+										<ul class="list-unstyled">
+											<li>
+												<a href="">
+														<div class="row icon-text">
+															<div class="icon-background">
+																<i class="icon-print"></i>
+															</div>
+															<div class="align-self-center">PRINT PROFILE
+																<!-- <div class="icon-text">
+																	Print Profile
+																</div> -->
+															</div>
+														</div>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section id="tabbedLayoutContainer">
+					<div class="container">
+					<div class="row row-content">
+			            <div class="col-12">
+			                <div class="mydiv">
+				            	<ul class="nav nav-tabs">
+				                    <li class="nav-item text-center">
+				                        <a class="nav-link active" href="#peter"
+				                            role="tab" data-toggle="tab">BIO</a>
+				                    </li>
+				                    <li class="nav-item text-center">
+				                        <a class="nav-link" href="#danny"
+				                            role="tab" data-toggle="tab">SKILLS</a>
+				                    </li>
+				                    <li class="nav-item text-center">
+				                        <a class="nav-link" href="#agumbe"
+				                            role="tab" data-toggle="tab">EXPERIENCE</a>
+				                    </li>
+				                    <li class="nav-item text-center">
+				                        <a class="nav-link" href="#alberto"
+				                            role="tab" data-toggle="tab">PROJECTS</a>
+				                    </li>
+				            	</ul>
+
+			                <div class="tab-content">
+			                    <div role="tabpanel" class="tab-pane fade show active" id="peter">
+			                    	<div class="row">
+			                    		<div class="col-12 col-sm-8">
+			                    			<div class="details-section">
+			                    				<h3>Education</h3>
+			                    				<hr>
+			                    					<ul class="section-listing list-unstyled">
+			                    						<li class="section-list-item">
+			                    							<div class="description bulleted">
+			                    								B-Tech, <a href="https://kecua.ac.in/" target="_blank">Computer Science</a>
+			                    							</div>
+			                    						</li>
+			                    						<li class="section-list-item">
+			                    							<div class="description bulleted">
+			                    								CBSE Class XII, <a href="https://www.navodaya.gov.in/nvs/nvs-school/ALMORA/en/home" target="_blank">JNV Almora</a>
+			                    							</div>
+			                    						</li>
+
+			                    					</ul>
+
+			                    			</div>
+			                    			<div class="details-section">
+			                    				<h3>Skills</h3>
+			                    				<hr>
+			                    				
+			                    			</div>
+			                    			
+			                    		</div>
+			                    		<div class="col col-sm">
+			                    			<div class="details-section">
+			                    				<h3>Contact</h3>
+			                    				<hr>
+			                    				<!-- <h5></h5> -->
+								                <!-- <address style="font-size: 100%"> -->
+								                    121, Clear Water Bay Road<br>
+								                    Clear Water Bay, Kowloon<br>
+								                    HONG KONG<br>
+								                    Gmail<br>
+								                    <i class="fa fa-phone"></i> +852 1234 5678<br>
+								                    <i class="fa fa-fax"></i> +852 8765 4321<br>
+								                    <i class="fa fa-envelope"></i>
+								                    <a href="mailto:confusion@food.net">
+								                    confusion@food.net</a><br>
+								                    linkedin<br>
+								                    github<br>
+								                <!-- </address> -->
+			                    			</div>
+			                    		</div>
+			                    	</div>
+			                        <!-- <h3>Peter Pan, <small>Chief Epicurious Officer</small></h3>
+			                        <p class="d-none d-sm-block">Our CEO, Peter, credits his hardworking East Asian immigrant parents who undertook the arduous journey to the shores of America with the intention of giving their children the best future. His mother's wizardy in the kitchen whipping up the tastiest dishes with whatever is available inexpensively at the supermarket, was his first inspiration to create the fusion cuisines for which <em>The Frying Pan</em> became well known. He brings his zeal for fusion cuisines to this restaurant, pioneering cross-cultural culinary connections.</p> -->
+			                    </div>
+			                    
+			                    <div role="tabpanel" class="tab-pane fade" id="danny">
+			                        <h3>Dhanasekaran Witherspoon, <small>Chief Food Officer</small></h3>
+			                        <p class="d-none d-sm-block">Our CFO, Danny, as he is affectionately referred to by his colleagues, comes from a long established family tradition in farming and produce. His experiences growing up on a farm in the Australian outback gave him great appreciation for varieties of food sources. As he puts it in his own words, <em>Everything that runs, wins, and everything that stays, pays!</em></p>
+			                    </div>
+			                    
+			                    <div role="tabpanel" class="tab-pane fade" id="agumbe">
+			                        <h3>Agumbe Tang, <small>Chief Taste Officer</small></h3>
+			                        <p class="d-none d-sm-block">Blessed with the most discerning gustatory sense, Agumbe, our CTO, personally ensures that every dish that we serve meets his exacting tastes. Our chefs dread the tongue lashing that ensues if their dish does not meet his exacting standards. He lives by his motto, <em>You click only if you survive my lick.</em></p>
+			                    </div>
+			                    
+			                    <div role="tabpanel" class="tab-pane fade" id="alberto">
+			                        <h3>Alberto Somayya, <small>Executive Chef</small></h3>
+			                        <p class="d-none d-sm-block">Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. He says, <em>Put together the cuisines from the two craziest cultures, and you get a winning hit! Amma Mia!</em></p>
+			                    </div>
+			                </div>
+	                	</div>
+            		</div>
+            		</div>
+				</section>
+			</div>
+		</main>
+		<footer id="footerContent"></footer>
+	</div>
+
 	<script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
