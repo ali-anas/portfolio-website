@@ -251,7 +251,7 @@ h2 {
 
 @include respond-above(sm) {
 	.image-container {
-		margin: 1.875em 1.875em 1.875em 0;
+		margin: 1.875em 1.875em 1.875em 1.875em;
 	    background-size: 9.375em 9.375em;
 	}
 }
@@ -270,3 +270,24 @@ h2 {
 		margin-right: auto;
 	}
 }
+
+@include respond-above(md) {
+	.container, .container-lg, .container-md, .container-sm {
+    	max-width: 100%;
+	}
+}
+
+@include respond-above(sm) {
+	.container, .container-md, .container-sm {
+	    max-width: 100%;
+	}
+}
+
+@include respond-above(xs) {
+	.container, .container-sm {
+	    max-width: 100%;
+	}
+}
+
+
+@import './portfolio.scss';

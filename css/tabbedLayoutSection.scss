@@ -156,11 +156,18 @@ a:hover{
 	margin-bottom: 1.875em;
 }
 
-.tab-pane h3 {
+h3 {
     color: #8c1515;
     font-size: 1.75em;
     font-weight: normal;
     line-height: 100%;
+}
+
+.list-wrapper h3 {
+    font-size: 0.9375em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.03333em;
 }
 
 hr {
@@ -169,6 +176,10 @@ hr {
     border-bottom: 0.25em solid #8c1515;
     margin: 0.5em 0;
     margin-right: 100%;
+}
+.list-wrapper hr {
+	border-bottom: 0.25em solid #585754;
+    margin: 0.25em 0;
 }
 
 ul {
@@ -179,7 +190,7 @@ ul {
 
 ul.section-listing {
 	list-style-image: none;
-    margin: 0 0 0 0;
+    margin: 0 0 0 8.3333%;
 }
 
 ul.section-listing li {
@@ -200,9 +211,14 @@ li {
     padding-left: 1.42857em;
 }
 
+
 ul.section-listing li > div.description, .tab-pane ul.section-listing li > span, .card ul.section-listing li > a {
     font-size: 0.875em;
 }
+
+/* .list-wrapper {
+    font-weight: bold;
+} */
 
 ul li a {
 	text-decoration:none;
@@ -212,4 +228,10 @@ ul li a {
 ul li a:hover {
 	text-decoration:none;
 	background-color: transparent;
+}
+
+.offset-1-and-padding {
+	margin-left: 8.333333%;
+	padding-left: 15px;
+	padding-right: 15px;
 }
