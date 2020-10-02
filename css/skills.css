@@ -1,0 +1,83 @@
+.skill-box {
+  font-family: 'ProductSans';
+  font-size: 0.8375;
+  letter-spacing: 0.04333em;
+  color: #3c4043;
+  font-weight: 500;
+  background-color: #fff;
+  /*border-radius: 10px;*/
+  min-height: 220px;
+  /*border: 1px solid #c7c1ad;*/
+  margin-bottom: 20px;
+  padding: 30px;
+  padding-left: 25px;
+  padding-right: 25px;
+  display: flex;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072); }
+  .skill-box h3 {
+    font-size: 18px; }
+  @media (min-width: 576px) {
+    .skill-box h3 {
+      font-size: 24px; } }
+
+.skill-list {
+  font-family: 'GoogleSans', sans-serif;
+  padding: 24px 0 0 24px; }
+  .skill-list li {
+    margin-bottom: 16px;
+    padding-left: 0;
+    letter-spacing: 0.06em;
+    float: left; }
+    .skill-list li h4 {
+      width: 180px;
+      font-size: 14px;
+      float: left; }
+    .skill-list li .rating {
+      height: 16px;
+      float: left; }
+      .skill-list li .rating span {
+        opacity: .3;
+        height: 14px;
+        width: 14px;
+        background-color: #3c4043;
+        display: block;
+        float: left;
+        margin-right: 2px;
+        border: 2px solid #eee;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        border-radius: 20px; }
+      @media (min-width: 576px) {
+        .skill-list li .rating span {
+          height: 16px;
+          width: 16px; } }
+    @media (min-width: 576px) {
+      .skill-list li h4 {
+        font-size: 16px; } }
+    @media (max-width: 767px) {
+      .skill-list li h4 {
+        width: 260px; } }
+    @media (min-width: 768px) {
+      .skill-list li h4 {
+        width: 150px; } }
+    @media (min-width: 992px) {
+      .skill-list li h4 {
+        width: 240px; } }
+  @media (max-width: 575px) {
+    .skill-list li {
+      margin-bottom: 8px; } }
+
+.open {
+  font-family: 'OpenSans', sans-serif;
+  letter-spacing: 0.04em; }
+
+.product {
+  font-family: 'ProductSans', sans-serif; }
+
+.roboto {
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 0.06em;
+  font-weight: 500; }
+
+.go-sans {
+  font-family: 'GoogleSans', sans-serif; }

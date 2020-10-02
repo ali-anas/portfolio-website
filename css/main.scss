@@ -85,7 +85,8 @@ $breakpoints: (
 }
 
 body {
-	font-family: 'SourceCodePro', sans-serif;
+	font-family: 'ProductSans', sans-serif;
+	letter-spacing: 0.04em;
 	padding: 56px 0px 0px 0px;
 	z-index: 0;
     color: #585754;
@@ -95,6 +96,7 @@ body {
 }
 
 .navbar {
+	font-family: 'OpenSans',sans-serif;
 	font-weight: bold;
 	background-color: #8c1515;
 	color: #FFFFFF;
@@ -105,11 +107,39 @@ body {
 	margin-left: auto;
 }
 
-.container,{
+.navbar .container, .container{
     padding: 0 1.125em;
 }
 
+container, .navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
+    width: 940px;
+}
+
+@include respond-below(sm) {
+	#tabbedLayoutContainer>.container {
+		padding: 0;
+		width: 100%;
+	}
+}
+
+@include respond-between(sm, md) {
+	.container {
+		width: auto;
+	}
+}
+
+@include respond-above(lg) {
+	#tabbedLayoutContainer>.container, .navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
+	    width: 1170px;
+	}
+
+	#masterHeadContainer>div.container, .navbar-static-top .container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
+	    width: 1170px;
+	}
+}
+
 .nameAndTitle {
+	font-family: 'ProductSans',sans-serif;
 	padding: 0px 0px;
 	margin: 0px 0px;
 	margin: 0 0.9375em 0.9375em 0;
@@ -118,7 +148,7 @@ body {
 .icons-list {
 	padding: 0px 0px;
 	margin: 0px 0px;
-	margin: 0 0.9375em 0.9375em 0.9375em;
+	/*margin: 0 0.9375em 0.9375em 0.9375em;*/
 }
 
 .image-container {
@@ -140,33 +170,61 @@ img {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
+.icons-list ul {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.icons-list ul li{
+	margin: 0 10px 10px 10px;
+}
+
+@include respond-below(sm) {
+	.icons-list ul li{
+		margin: 0 5px 5px 5px;
+	}
+}
+
 .icon-background {
     width: 1.5625em;
     height: 1.5625em;
     border-radius: 50%;
-    margin: 0 0.3875em 0 0;
+    margin: 0 0 0.18375 0;
+    text-align: center;
+    padding: 0 0 0 2px;
 }
 
 a {
 	text-decoration:none;
 }
 
-.icon-text {
-	font-size: 0.75em;
+.icon-container {
 	font-weight: light;
     letter-spacing: 0.08333em;
     line-height: 125%;
     text-shadow: 0 0 0.83333em rgba(0, 0, 0, 0.5);
     text-transform: uppercase;
     color: #fff;
+
+    .fa {
+    	padding-top: 4px;
+    }
+
+    .icon-text {
+    	font-size: 0.75em;
+    	padding-left: 0.5em;
+    	padding-top: 4px;
+    	margin-bottom: 0;
+    	color: rgba(255, 255, 255, 0.7);
+    }
+
+    .icon-text:hover {
+    	color: #fff;
+    }
+
 }
 
 
-.banner .profile {
-    color: white;
-    padding-bottom: 1.25em;
-    margin-bottom: 0;
-}
 
 .banner {
 	background-image: url(../img/collonade.jpg);
@@ -175,9 +233,28 @@ a {
     -moz-box-shadow: 0 0.1875em 0.1875em rgba(0, 0, 0, 0.2);
     box-shadow: 0 0.1875em 0.1875em rgba(0, 0, 0, 0.2);
     background-position: center;
-    margin: 0 0 1.875em 0;
     padding: 1.25em 0 1.25em 0;
+
 }
+
+.banner .profile {
+    color: white;
+    padding-bottom: 1.25em;
+    margin-bottom: 0;
+}
+
+@include respond-above(sm) {
+    .banner.profile {
+    	margin-bottom: 1.875em;
+	}
+}
+
+@include respond-above(sm) {
+   	.banner {
+    	border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    }
+}
+
 
 div {
 	display: block;
@@ -188,43 +265,44 @@ section {
 }
 
 
-h1 {
-    font-size: 1.25em;
-    line-height: 100%;
-    margin: 0 0 0.17857em 0;
-    font-weight: bold;
-    text-shadow: 0 0 0.35714em rgba(0, 0, 0, 0.5);
-    color: #fff;
-}
+.nameAndTitle {
+	h1 {
+	    font-size: 1.25em;
+	    letter-spacing: 0.04333em;
+	    line-height: 100%;
+	    margin: 0 0 0.17857em 0;
+	    font-weight: bold;
+	    text-shadow: 0 0 0.35714em rgba(0, 0, 0, 0.5);
+	    color: #fff;
+	}
 
-h2 {
-	font-size: 0.75em;
-	font-weight: 500;
-    letter-spacing: 0.08333em;
-    line-height: 125%;
-    text-shadow: 0 0 0.83333em rgba(0, 0, 0, 0.5);
-    margin-bottom: 0.83333em;
-    text-transform: uppercase;
-    color: #fff;
-}
-
-
-
-
-@include respond-above(sm) {
-  h1 {
-    font-size: 2.25em;
-  }
-}
-
-@include respond-above(sm) {
 	h2 {
-		font-size: 0.875em;
+		font-size: 0.75em;
+		font-weight: 500;
+	    letter-spacing: 0.08333em;
+	    line-height: 125%;
+	    text-shadow: 0 0 0.83333em rgba(0, 0, 0, 0.5);
+	    margin-bottom: 0.83333em;
+	    text-transform: uppercase;
+	    color: #fff;
+	}
+
+	@include respond-above(sm) {
+	  h1 {
+	    font-size: 2.25em;
+	  }
+	}
+
+	@include respond-above(sm) {
+		h2 {
+			font-size: 0.875em;
+		}
 	}
 }
 
+
 @include respond-above(sm) {
-	.icon-text {
+	.icon-container.icon-text {
 		font-size: 0.875em;
 	}
 }
@@ -263,13 +341,14 @@ h2 {
 	}
 }
 
-@include respond-below(xss) {
+@include respond-below(xxs) {
 	.image-container {
 		padding: 0px 50px;
 		margin-left: auto;
 		margin-right: auto;
 	}
 }
+
 
 @include respond-above(md) {
 	.container, .container-lg, .container-md, .container-sm {
@@ -291,3 +370,5 @@ h2 {
 
 
 @import './portfolio.scss';
+@import './footer.scss';
+@import './skills.scss';
