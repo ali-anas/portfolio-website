@@ -1,5 +1,6 @@
 $breakpoints: (
   xxs: 296px,
+  xxxs: 380px,
   xs: 576px,
   sm: 768px,
   md: 992px,
@@ -83,7 +84,7 @@ $breakpoints: (
 
 
 .skill-box {
-    font-family: 'ProductSans';
+    font-family: 'ProductSans' sans-serif;
     font-size: 0.8375;
     letter-spacing: 0.04333em;
     color: #3c4043;
@@ -92,6 +93,7 @@ $breakpoints: (
     /*border-radius: 10px;*/
     min-height: 220px;
     /*border: 1px solid #c7c1ad;*/
+    margin: 10px;
     margin-bottom: 20px;
     padding: 30px;
     padding-left: 25px;
@@ -104,12 +106,12 @@ $breakpoints: (
   0 22.3px 17.9px rgba(0, 0, 0, 0.072);
 
   h3 {
-    font-size: 18px;
+    font-size: 1.25em;
   }
 
   @include respond-above(xs) {
     h3 {
-        font-size: 24px;
+        font-size: 1.5em;
     }
   }
 }
@@ -126,14 +128,14 @@ $breakpoints: (
         
 
         h4 {
-            width: 180px;
             font-size: 14px;
             float: left;
         }
 
         .rating {
+            display: block;
             height: 16px;
-            float: left;
+            float: right;
 
             span {
                 opacity: .3;
@@ -157,21 +159,34 @@ $breakpoints: (
             }   
         }
 
-        @include respond-above(xs) {
-            h4 {
-                font-size: 16px;
+        @include respond-below(xxxs) {
+            .rating {
+                display: none;
             }
         }
 
-        @include respond-below(sm) {
+
+        @include respond-below(xxxs) {
+            h4 {
+                width: 100%;
+                line-height: unset;
+            }
+        }
+        @include respond-between(xs,sm) {
             h4 {
                 width: 260px;
             }
         }
 
+        @include respond-between(xxxs,xs) {
+            h4 {
+                width: 130px;
+            }
+        }
+
         @include respond-above(sm) {
             h4 {
-                width: 150px;
+                width: 130px;
             }
         }
 
@@ -181,11 +196,25 @@ $breakpoints: (
             }
         }
 
+        @include respond-above(xs) {
+            h4 {
+                font-size: 16px;
+            }
+        }
+
+        
+
     }
 
     @include respond-below(xs) {
         li {
             margin-bottom: 8px;
+        }
+    }
+
+    @include respond-below(xxxs) {
+        li {
+            list-style: square;
         }
     }
     

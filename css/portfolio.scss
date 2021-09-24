@@ -26,6 +26,26 @@ $breakpoints: (
     @warn 'Invalid breakpoint: #{$breakpoint}.';
   }
 }
+@mixin respond-above($breakpoint) {
+
+  // If the breakpoint exists in the map.
+  @if map-has-key($breakpoints, $breakpoint) {
+
+    // Get the breakpoint value.
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+
+    // Write the media query.
+    @media (min-width: $breakpoint-value) {
+      @content;
+    }
+
+  // If the breakpoint doesn't exist in the map.
+  } @else {
+
+    // Log a warning.
+    @warn 'Invalid breakpoint: #{$breakpoint}.';
+  }
+}
 
 /*.project {
 	border: 1px solid #585754;
@@ -43,12 +63,12 @@ $breakpoints: (
     min-height: 220px;
     text-align: center;
     /*border: 1px solid #c7c1ad;*/
+    margin: 10px;
     margin-bottom: 20px;
     padding: 20px;
     padding-left: 25px;
     padding-right: 25px;
     display: flex;
-    align-items: center;
     box-shadow:
   0 2.8px 2.2px rgba(0, 0, 0, 0.034),
   0 6.7px 5.3px rgba(0, 0, 0, 0.048),
@@ -89,32 +109,50 @@ $breakpoints: (
     width: 100%;
     margin-left: 30px;
     text-align: left;
+    letter-spacing: 0.06em;
+
+    h1 {
+      color: #8c1515;
+        font-size: 1.25em;
+        margin: 0;
+        margin-bottom: 5px;
+        font-weight: normal;
+    }
+
+    @include respond-above(xs) {
+      h1 {
+        font-size: 1.5em;
+      }
+    }
+
+    h2 {
+      color: #666;
+      font-size: 0.875em;
+      text-align: left;
+      padding: 0;
+      margin: 0;
+      margin-bottom: 15px;
+      font-weight: lighter;
+    }
+
+    p {
+      color: #333;
+      font-size: 1.0em;
+      margin: 0;
+      line-height: normal;
+      margin-bottom: 10px;
+    }
 }
 
-.project-text-container h1 {
-	color: #8c1515;
-    font-size: 22px;
-    margin: 0;
-    margin-bottom: 5px;
-    font-weight: normal;
+
+
+
+@include respond-below(xxs) {
+  .project-text-container {
+    margin-left: 0;
+  }
 }
 
-.project-text-container h2 {
-	color: #585754;
-    font-size: 16px;
-    text-align: left;
-    padding: 0;
-    margin: 0;
-    margin-bottom: 15px;
-    font-weight: lighter;
-}
-
-.project-text-container p {
-    font-size: 14px;
-    margin: 0;
-    line-height: normal;
-    margin-bottom: 10px;
-}
 
 
 @include respond-below(xxs) {

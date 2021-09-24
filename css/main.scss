@@ -1,5 +1,4 @@
 @import './fonts.scss';
-@import './tabbedLayoutSection.scss';
 
 $breakpoints: (
   xxs: 296px,
@@ -243,7 +242,8 @@ a {
 
 
 .banner {
-	background-image: url(../img/collonade.jpg);
+	background-image: url(../img/background-1.png);
+	/*background: linear-gradient(62deg, #FEE140, #FA709A);*/
     background-size: cover;
     -webkit-box-shadow: 0 0.1875em 0.1875em rgba(0, 0, 0, 0.2);
     -moz-box-shadow: 0 0.1875em 0.1875em rgba(0, 0, 0, 0.2);
@@ -386,6 +386,7 @@ section {
 }
 
 
+@import './tabbedLayoutSection.scss';
 @import './portfolio.scss';
 @import './footer.scss';
 @import './skills.scss';

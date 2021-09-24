@@ -2,4 +2,20 @@
 	padding: 2.1875em;
 	background-color: #8c1515;
 	color: #fff;
+
+	a, a:hover {
+		color:#fff;
+		text-decoration: none;
+	}
+
+	ul li {
+		padding-top: 10px;
+	}
+
+	.footer-icon-background {
+		background-color: rgba(255, 255, 255, 0.2);
+		width: 2.5em;
+	    height: 2.5em;
+	    border-radius: 50%;
+	}
 }
